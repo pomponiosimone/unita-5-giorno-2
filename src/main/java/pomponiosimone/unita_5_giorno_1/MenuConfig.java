@@ -1,19 +1,21 @@
 package pomponiosimone.unita_5_giorno_1;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import pomponiosimone.unita_5_giorno_1.entities.Drink;
 import pomponiosimone.unita_5_giorno_1.entities.Pizza;
 import pomponiosimone.unita_5_giorno_1.entities.Topping;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Configuration
 public class MenuConfig {
 
     //Beans
+    @Value("${costo.del.coperto:2.50}")
+    private double costoDelCoperto;
+
     @Bean
     public List<Pizza> Menupizza() {
        return List.of(

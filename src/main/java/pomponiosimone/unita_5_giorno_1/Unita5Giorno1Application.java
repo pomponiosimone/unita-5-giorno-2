@@ -20,7 +20,7 @@ public class Unita5Giorno1Application {
 
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MenuConfig.class);
         System.out.println("-------------------Menù Pizza-----------------" );
-		System.out.println("Nome         Calorie         Prezzo" );
+
 		List<Pizza> menuPizza = context.getBean("Menupizza", List.class);
 		menuPizza.forEach(System.out::println);
 		System.out.println("-------------------Menù Drink-----------------");
@@ -29,6 +29,7 @@ public class Unita5Giorno1Application {
 		System.out.println("-------------------Menù Topping-----------------");
 		List<Topping> menuTopping = context.getBean("Menutopping", List.class);
 		menuTopping.forEach(System.out::println);
+
 
 
 

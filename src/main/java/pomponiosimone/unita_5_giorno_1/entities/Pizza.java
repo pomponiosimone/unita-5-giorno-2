@@ -8,13 +8,13 @@ public class Pizza extends Menu {
     public Pizza(String name, int calories, double price) {
         super (name,calories,price);
     }
+
     @Override
     public String toString() {
-        return
-                 name +
-                "            " + calories +
-                "           " + price +
-                ' ';
+        return "Pizza{" +
+                "calories=" + calories +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
-
 }
